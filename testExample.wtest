@@ -1,9 +1,14 @@
-import example.pepita
+import elemento.*
+import personaje.*
 
 describe "group of tests for pepita" {
 
-  test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
+  test "luisa inicia con Floki y elije el personaje Mario" {
+    assert.equals(mario, luisa.personaje(mario))
+    assert.equals(mario, luisa.personajeActivo())
   }
-
+test "Luisa con Floki ataca a castillo con ballesta" {
+  assert.equals(floki, luisa.personaje(floki))
+  assert.equals(ballesta, floki.arma())
+  }
 }
